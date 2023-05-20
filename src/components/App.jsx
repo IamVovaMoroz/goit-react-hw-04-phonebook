@@ -5,6 +5,7 @@ import ContactForm from './ContactForm/ContactForm';
 import ContactsList from './ContactsList/ContactsList';
 import Filter from './Filter/Filter';
 import Section from './Section/Section ';
+import css from "./App.module.css"
 
 const initialContacts = [
   { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
@@ -78,10 +79,10 @@ class App extends Component {
     const filteredContacts = this.handleFilterContacts();
     return (
       <Section>
-        <h1>Phonebook</h1>
+        <h1 className={css.title}>Phonebook</h1>
         <ContactForm addContact={this.addContact} />
 
-        <h2>Contacts</h2>
+        <h2 className={css.title}>Contacts</h2>
         <Filter filterValue={this.state.filter} onChange={this.handleChange} />
         <ContactsList
           list={filteredContacts}
