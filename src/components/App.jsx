@@ -1,4 +1,4 @@
-// import { Component } from 'react';
+
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import { useLocalStorage } from 'hooks/useLocalStorage';
