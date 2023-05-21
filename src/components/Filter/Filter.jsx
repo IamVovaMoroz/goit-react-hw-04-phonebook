@@ -13,7 +13,9 @@ function Filter({ filterValue, onChange }) {
         type="text"
         name="filter"
         value={filterValue}
-        onChange={onChange('filter')}
+
+        // убираем вызов функции, оставляем только ссылку onChange={onChange('filter')}
+        onChange={onChange}
       />
     </label>
   );
